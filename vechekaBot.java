@@ -145,7 +145,7 @@ public class vechekaBot implements Observer {
 	 */
 	private void sleep() {
 		try {
-			Thread.sleep(30 * 100);
+			Thread.sleep(360 * 1000); // an hour
 			reset();
 			try {
 				run();
@@ -167,13 +167,13 @@ public class vechekaBot implements Observer {
 		isYes = false;
 		hasPickedLetter = false;
 		
-//		for (final Status s: myPreviousStatusList) {
-//			try {
-//				deleteStatus(s);
-//			} catch (final TwitterException theE) {
-//				theE.printStackTrace();
-//			}
-//		}
+		for (final Status s: myPreviousStatusList) {
+			try {
+				deleteStatus(s);
+			} catch (final TwitterException theE) {
+				theE.printStackTrace();
+			}
+		}
 		myPreviousStatusList.clear();
 		
 	}
