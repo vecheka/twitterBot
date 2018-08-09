@@ -23,11 +23,12 @@ public class TwitterStreamer extends Observable implements UserStreamListener {
 	 * Constructor that initialize stream listener.
 	 */
 	public TwitterStreamer() {
+		// all keys have taken for privacy purposes
 		ConfigurationBuilder cb = new ConfigurationBuilder();
-		cb.setDebugEnabled(true).setOAuthConsumerKey("vxcbzB8akWf5vJdCknHEGP6lV")
-		.setOAuthConsumerSecret("JXploEIvuCaNi2QBN0NICaHZNWFVUJ6V8CFrOAbZHyJ87hWj73")
-		.setOAuthAccessToken("841544113841364992-7sNHTpzigzAxenvCbSeEoL2ura313zj")
-		.setOAuthAccessTokenSecret("jKwOOWV6OnQGrJMwwYAaswij0HpKMtbODuk6gued3jrqa");
+		cb.setDebugEnabled(true).setOAuthConsumerKey("someKeys")
+		.setOAuthConsumerSecret("someKeys")
+		.setOAuthAccessToken("someKeys")
+		.setOAuthAccessTokenSecret("someKeys");
 		TwitterStream twitterStream = new TwitterStreamFactory(cb.build()).getInstance();
 		twitterStream.addListener(this);
 		twitterStream.user();
