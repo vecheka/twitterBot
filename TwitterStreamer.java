@@ -58,17 +58,6 @@ public class TwitterStreamer extends Observable implements UserStreamListener {
 		
 		setChanged();
 		notifyObservers(theStatus);
-//		final String[] response = theStatus.getText().split(" ");
-//		if (response[1].equalsIgnoreCase("yes")) {
-//			try {
-//				myTwitter.updateStatus(new StatusUpdate("Replying to @" + theStatus.getUser().getScreenName()
-//						+ "\nDo you want to be \'X\' or \'O\'?").inReplyToStatusId(theStatus.getId()));
-//			} catch (TwitterException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-		System.out.println(theStatus.getUser().getScreenName());
 		
 	}
 
